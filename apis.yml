@@ -1,22 +1,155 @@
 aid: taurus
 name: Taurus
-description: Taurus is a company surfaced as a portfolio company of general-catalyst and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Taurus SA (Taurus HQ) is a Geneva-based digital asset infrastructure provider for
+  banks and financial institutions. Its platform spans four institutional products
+  exposed through APIs: Taurus-PROTECT (bank-grade custody of cryptocurrencies, digital
+  assets, and private keys secured in FIPS 140-2 Level 3 HSMs), Taurus-CAPITAL (issuance
+  and lifecycle management of tokenized securities and digital assets), Taurus-EXPLORER
+  (blockchain node and indexing services across dozens of protocols), and Taurus-PRIME
+  (institutional trading connectivity with deep liquidity via REST and FIX). The
+  Taurus-PROTECT REST API (versioned /api/rest/v1/) uses bearer plus HMAC request signing,
+  cursor-based pagination, and governance rules enforced by digital signatures, with
+  first-party Java, Go, Python, and TypeScript SDKs, OIDC/SAML SSO, and SCIM provisioning.
 url: https://raw.githubusercontent.com/api-evangelist/taurus/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://taurushq.com/img/brand@2x.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - general-catalyst
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-public-docs
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Digital Assets
+- Cryptocurrency
+- Custody
+- Tokenization
+- Blockchain
+- Trading
+- Financial Services
+- FinTech
+- Institutional
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Taurus-PROTECT & Taurus-CAPITAL API
+  description: >-
+    REST API for institutional custody (Taurus-PROTECT) and tokenization / digital asset
+    issuance (Taurus-CAPITAL). Bearer + HMAC request signing, versioned under /api/rest/v1/,
+    cursor-based pagination, governance rules enforced with digital signatures, webhooks,
+    and OIDC/SAML SSO with SCIM provisioning.
+  humanURL: https://docs.taurushq.com/protect-capital/docs/introduction
+  baseURL: https://docs.taurushq.com/protect-capital/reference
+  tags:
+  - Custody
+  - Tokenization
+  - Wallets
+  - Transactions
+  - Staking
+  properties:
+  - type: Documentation
+    url: https://docs.taurushq.com/protect-capital/docs/introduction
+  - type: APIReference
+    url: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+  - type: GettingStarted
+    url: https://docs.taurushq.com/protect-capital/docs/introduction
+- name: Taurus-EXPLORER API
+  description: >-
+    Blockchain node and indexing services providing normalized access to on-chain data
+    across dozens of supported protocols.
+  humanURL: https://docs.taurushq.com/explorer/reference/introduction
+  baseURL: https://docs.taurushq.com/explorer/reference
+  tags:
+  - Blockchain
+  - Nodes
+  - Indexing
+  properties:
+  - type: APIReference
+    url: https://docs.taurushq.com/explorer/reference/introduction
+- name: Taurus-PRIME API
+  description: >-
+    Institutional trading infrastructure with deep liquidity and institutional-grade
+    execution, accessible over both a REST API and the FIX protocol.
+  humanURL: https://docs.taurushq.com/prime
+  baseURL: https://docs.taurushq.com/prime/reference
+  tags:
+  - Trading
+  - Liquidity
+  - FIX
+  - Execution
+  properties:
+  - type: APIReference
+    url: https://docs.taurushq.com/prime/reference/balanceservice_getbalances
+  - type: Documentation
+    url: https://docs.taurushq.com/prime/docs/fix-introduction
+common:
+- type: DeveloperPortal
+  url: https://docs.taurushq.com/
+- type: Documentation
+  url: https://docs.taurushq.com/
+- type: APIReference
+  url: https://docs.taurushq.com/protect-capital/reference
+- type: GettingStarted
+  url: https://docs.taurushq.com/protect-capital/docs/introduction
+- type: GitHubOrganization
+  url: https://github.com/taurushq-io
+- type: Authentication
+  url: authentication/taurus-authentication.yml
+- type: Conventions
+  url: conventions/taurus-conventions.yml
+- type: SDKs
+  url: packages/taurus-packages.yml
+- type: Packages
+  url: packages/taurus-packages.yml
+- type: ErrorCatalog
+  url: errors/taurus-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/taurus-lifecycle.yml
+- type: Conformance
+  url: conformance/taurus-conformance.yml
+- type: Compliance
+  url: security/taurus-trust-center.yml
+- type: TrustCenter
+  url: security/taurus-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/taurus-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.taurushq.com/security
+- type: SecurityTxt
+  url: well-known/taurus-security.txt
+- type: WellKnown
+  url: well-known/taurus-well-known.yml
+- type: DomainSecurity
+  url: security/taurus-domain-security.yml
+- type: Webhooks
+  url: asyncapi/taurus-protect-webhooks.yml
+- type: LLMsTxt
+  url: llms/taurus-llms.txt
+- type: LinkedIn
+  url: https://ch.linkedin.com/company/taurus-sa
+- type: Twitter
+  url: https://twitter.com/taurus_hq
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1

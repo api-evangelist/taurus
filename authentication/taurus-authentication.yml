@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+docs: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+summary:
+  types: [http, hmac, openIdConnect, saml]
+  api_key_in: []
+  oauth2_flows: []
+  notes: >-
+    Taurus-PROTECT API calls authenticate with a bearer token and additionally require HMAC
+    request signing (a signing proxy computes the request signature). Sensitive/governed actions
+    (creating a transaction request, initiating staking, etc.) are further authorized by digital
+    signatures under configurable governance rules. Human/console access is federated via SSO.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    description: Bearer access token presented on API requests.
+    sources: [https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts]
+  - name: hmacRequestSigning
+    type: hmac
+    description: >-
+      Requests are signed with an HMAC over the request; a signing/authentication proxy
+      is provided to compute and attach the signature.
+    sources: [https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts]
+  - name: governanceDigitalSignatures
+    type: digital-signature
+    description: >-
+      Governed actions require one or more digital signatures satisfying the tenant's
+      governance ruleset before execution.
+    sources: [https://docs.taurushq.com/protect-capital/docs/introduction]
+sso:
+  protocols: [OpenID Connect, SAML]
+  provisioning: SCIM 2.0
+  identity_providers_documented: [Okta, Azure AD]
+  source: https://docs.taurushq.com/protect-capital/docs/introduction-2

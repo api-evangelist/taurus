@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.taurushq.com/protect-capital/reference/pagination
+scope: Taurus-PROTECT & Taurus-CAPITAL REST API
+format: coded            # custom E<NNN>-<NAME> scheme, NOT rfc9457 problem+json
+envelope:
+  scheme: "E<NNN>-<NAME>"
+  problem_json: false
+notes: >-
+  Taurus-PROTECT surfaces errors as coded identifiers of the form E<NNN>-<NAME>. Only a small
+  number are directly evidenced on the public reference (the pagination page documents the
+  cursor error below); the full registry is not published openly. Captured verbatim; not padded.
+problems:
+  - code: E900-INVALID_CURSOR_DATA
+    title: Invalid cursor data
+    meaning: >-
+      The pagination cursor token was malformed or manually constructed rather than copied
+      verbatim from a prior response.
+    remediation: >-
+      Pass the exact cursor.currentPage token returned by the previous response; do not build
+      the token by hand.
+    source: https://docs.taurushq.com/protect-capital/reference/pagination

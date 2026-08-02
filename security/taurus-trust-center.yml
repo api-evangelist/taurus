@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+probe: false
+url: https://www.taurushq.com/security
+certifications:
+  - ISAE 3402 Type II
+  - FIPS 140-2 Level 3
+  - CMTA DACS          # CMTA Digital Assets Custody Standard
+  - ISO 27001
+assurance:
+  third_party_tests_per_year: "10+"
+  test_types: [penetration testing, code audits, red teaming]
+  reports_shared_with_clients: true
+evidence:
+  - source: https://www.taurushq.com/security
+    keywords: [ISAE 3402 Type II, FIPS 140-2 Level 3, CMTA DACS, ISO 27001]

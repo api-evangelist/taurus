@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.taurushq.com/protect-capital/page/sdk-reference
+notes: >-
+  First-party Taurus-PROTECT SDKs published in the mono-repo github.com/taurushq-io/taurus-protect-sdk
+  (one language subdirectory each). The docs name the packages/imports below. A public-registry
+  lookup for the Python name returned 404 (https://pypi.org/pypi/taurus-protect/json -> 404), so
+  these are treated as source-distributed (GitHub) unless/until a registry release is confirmed;
+  registry fields are left unverified rather than asserted.
+packages:
+  - language: java
+    registry: maven-central
+    name: taurus-protect-sdk-java
+    client_class: ProtectClient
+    source_repo: https://github.com/taurushq-io/taurus-protect-sdk/tree/main/taurus-protect-sdk-java
+    license: Apache-2.0
+    official: true
+    registry_verified: false
+  - language: go
+    registry: go-modules
+    name: github.com/taurushq-io/taurus-protect-sdk/taurus-protect-sdk-go
+    import: github.com/taurushq-io/taurus-protect-sdk/taurus-protect-sdk-go/pkg/protect
+    source_repo: https://github.com/taurushq-io/taurus-protect-sdk/tree/main/taurus-protect-sdk-go
+    license: MIT
+    official: true
+    registry_verified: false
+  - language: python
+    registry: pypi
+    name: taurus_protect
+    import: from taurus_protect import ProtectClient
+    source_repo: https://github.com/taurushq-io/taurus-protect-sdk
+    license: MIT
+    official: true
+    registry_verified: false
+    registry_note: "pypi.org/pypi/taurus-protect/json returned 404 on 2026-07-21"
+  - language: typescript
+    registry: npm
+    name: "@taurushq/protect-sdk"
+    import: "import { ... } from '@taurushq/protect-sdk'"
+    source_repo: https://github.com/taurushq-io/taurus-protect-sdk
+    license: MIT
+    official: true
+    registry_verified: false

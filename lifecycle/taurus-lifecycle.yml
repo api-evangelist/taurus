@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+versioning:
+  scheme: uri-path
+  api_version: v1            # endpoints under /api/rest/v1/
+  product_releases_observed: [v3.38, v3.54]   # Taurus-PROTECT product release line referenced in the reference docs
+  docs: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  notes: No public deprecation policy or RFC 8594 Sunset/Deprecation header support was found.
+sla:
+  url: null
+status_page:
+  url: null
+  notes: No public status page confirmed at status.taurushq.com during this pass.
+security_txt_expiry: '2026-04-01T12:00:00Z'   # from /.well-known/security.txt (currently expired)

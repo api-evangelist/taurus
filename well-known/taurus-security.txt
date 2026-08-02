@@ -1,0 +1,6 @@
+Canonical: https://www.taurushq.com/security
+Contact: mailto:security@taurushq.com
+Encryption: https://t-dx.com/security/#:~:text=Reporting%20Vulnerabilities
+Expires: 2026-04-01T12:00:00Z
+Policy: https://t-dx.com/security/#:~:text=Reporting%20Vulnerabilities
+Preferred-Languages: en, fr, de

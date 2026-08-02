@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+type: Webhooks
+source: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+scope: Taurus-PROTECT & Taurus-CAPITAL
+supported: true
+description: >-
+  Taurus-PROTECT documents webhook support for delivering notifications and event updates
+  (for example around transaction requests and their governance/approval lifecycle). The
+  public reference confirms webhooks are supported but does not publish an open, enumerated
+  event catalog or an AsyncAPI document, so no event list is asserted here (no fabrication).
+asyncapi_spec: null
+events: []
+notes: >-
+  A full webhook event-type catalog and AsyncAPI definition would live in the tenant/integration
+  documentation. Emit type Webhooks (surface confirmed); AsyncAPI left null until a real spec is found.

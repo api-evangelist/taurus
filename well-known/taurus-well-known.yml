@@ -1,0 +1,17 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.taurushq.com/.well-known/
+host: https://www.taurushq.com
+documents:
+  - path: /.well-known/security.txt          # RFC 9116 — real, saved verbatim (Expires 2026-04-01, expired)
+    status: 200
+    file: taurus-security.txt
+  - path: /.well-known/openid-configuration   # returns 200 but body is the SPA marketing HTML (soft-404), not an OIDC discovery doc
+    status: 200
+    note: soft-404 SPA HTML, not a real OpenID configuration
+  - path: /.well-known/oauth-authorization-server
+    status: unverified
+  - path: /.well-known/api-catalog
+    status: unverified
+  - path: /.well-known/ai-plugin.json
+    status: unverified

@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.taurushq.com/protect-capital/reference/api-structure-and-concepts
+scope: Taurus-PROTECT & Taurus-CAPITAL REST API
+authentication:
+  style: bearer + HMAC request signing
+  governed_actions: digital signatures under governance rules
+  see: authentication/taurus-authentication.yml
+versioning:
+  api_path: /api/rest/v1/
+  scheme: uri-path (v1) with product releases versioned separately (observed v3.38 .. v3.54)
+  see: lifecycle/taurus-lifecycle.yml
+pagination:
+  style: cursor
+  request_params:
+    - name: cursor.pageRequest
+      values: [FIRST, LAST, NEXT, PREVIOUS]
+    - name: cursor.pageSize
+      description: number of results per page
+    - name: cursor.currentPage
+      description: opaque token from a prior response; required for NEXT / PREVIOUS
+  response_fields:
+    - cursor.currentPage   # server-generated token to pass on the next request
+    - hasNext              # boolean, more pages exist
+    - hasPrevious          # boolean, prior pages exist
+  notes: >-
+    The cursor token must be copied verbatim from responses; manually constructing it yields
+    E900-INVALID_CURSOR_DATA. Documented on statistics, balances, and request-related endpoints.
+  source: https://docs.taurushq.com/protect-capital/reference/pagination
+idempotency:
+  supported: unknown
+  notes: >-
+    No documented idempotency-key header/parameter was found on the public reference; mutations
+    are instead controlled by the governance/digital-signature model. Not asserting idempotency.
+error_envelope:
+  scheme: coded
+  format: custom (E<NNN>-<NAME>), e.g. E900-INVALID_CURSOR_DATA
+  problem_json: false
+  see: errors/taurus-problem-types.yml
+webhooks:
+  supported: true
+  notes: Webhooks are documented as supported for notifications/events.
+  see: asyncapi/taurus-protect-webhooks.yml
+rate_limits:
+  documented: unknown
