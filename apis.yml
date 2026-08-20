@@ -42,6 +42,17 @@ tags:
 - Tokenization
 - Blockchain
 - Trading
+- Financial-Services
+- Fintech
+- Institutional
+tags_raw:
+- Company
+- Digital Assets
+- Cryptocurrency
+- Custody
+- Tokenization
+- Blockchain
+- Trading
 - Financial Services
 - FinTech
 - Institutional
@@ -60,6 +71,12 @@ apis:
   humanURL: https://docs.taurushq.com/protect-capital/docs/introduction
   baseURL: https://docs.taurushq.com/protect-capital/reference
   tags:
+  - Custody
+  - Tokenization
+  - Wallets
+  - Transaction
+  - Staking
+  tags_raw:
   - Custody
   - Tokenization
   - Wallets
