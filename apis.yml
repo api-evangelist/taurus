@@ -12,6 +12,17 @@ description: >-
   cursor-based pagination, and governance rules enforced by digital signatures, with
   first-party Java, Go, Python, and TypeScript SDKs, OIDC/SAML SSO, and SCIM provisioning.
 url: https://raw.githubusercontent.com/api-evangelist/taurus/refs/heads/main/apis.yml
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
