@@ -131,6 +131,8 @@ apis:
   - type: Documentation
     url: https://docs.taurushq.com/prime/docs/fix-introduction
 common:
+- type: Website
+  url: https://www.taurushq.com/
 - type: DeveloperPortal
   url: https://docs.taurushq.com/
 - type: Documentation
