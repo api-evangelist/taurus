@@ -109,6 +109,10 @@ apis:
   baseURL: https://docs.taurushq.com/explorer/reference
   tags:
   - Blockchain
+  - Node
+  - Indexing
+  tags_raw:
+  - Blockchain
   - Nodes
   - Indexing
   properties:
