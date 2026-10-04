@@ -54,7 +54,7 @@ tags:
 - Tokenization
 - Blockchain
 - Trading
-- Financial-Services
+- Financial Services
 - Fintech
 - Institutional
 tags_raw:
@@ -68,6 +68,7 @@ tags_raw:
 - Financial Services
 - FinTech
 - Institutional
+- Financial-Services
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
